@@ -1,0 +1,17 @@
+// app/robots.txt/route.ts
+export async function GET() {
+  const baseUrl = process.env.SITE_URL || "http://localhost:3000";
+
+  return new Response(
+    `User-agent: *
+Allow: /
+
+Sitemap: ${baseUrl}/sitemap.xml
+`,
+    {
+      headers: {
+        "Content-Type": "text/plain",
+      },
+    }
+  );
+}
