@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { prisma } from "@/lib/prisma";
 import { canonical } from "@/lib/seo";
 
-export const revalidate = 60 * 60;
 
 export const metadata: Metadata = {
     title: "Pages — Rishikeshin",

@@ -3,9 +3,6 @@ import type { Metadata } from "next";
 import { prisma } from "@/lib/prisma";
 import { canonical } from "@/lib/seo";
 
-export const revalidate = 60 * 60 * 24; // 24h; also on-demand via admin
-
-// Prebuild a few recent pages; long-tail uses fallback
 export async function generateStaticParams() {
     const top = await prisma.page.findMany({
         where: { status: "PUBLISHED" },

@@ -13,7 +13,6 @@ async function getData() {
     return { pages };
 }
 
-export const runtime = "nodejs";
 
 
 // ---------- Server Actions ----------
