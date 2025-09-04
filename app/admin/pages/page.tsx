@@ -2,19 +2,9 @@
    app/admin/pages/page.tsx   (Admin: create/edit + revalidate)
    =========================================================== */
 import { prisma } from "@/lib/prisma";
-import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 
-// --------- helpers ----------
-function requireAdminFromParams(
-    sp: Record<string, string | string[] | undefined> | undefined
-) {
-    const raw = sp?.token;
-    const token = Array.isArray(raw) ? (raw[0] ?? "") : (raw ?? "");
-    if (token !== process.env.ADMIN_TOKEN) {
-        redirect("/?err=unauthorized");
-    }
-}
+
 
 async function getData() {
     const pages = await prisma.page.findMany({
@@ -66,11 +56,7 @@ async function deletePage(formData: FormData) {
     if (slug) revalidatePath(`/p/${slug}`);
 }
 
-export default async function AdminPages({
-    _searchParams,
-}: {
-    _searchParams?: Record<string, string | string[] | undefined>;
-}) {
+export default async function AdminPages() {
 
     const { pages } = await getData();
 
