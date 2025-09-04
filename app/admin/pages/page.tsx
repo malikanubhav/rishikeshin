@@ -67,9 +67,9 @@ async function deletePage(formData: FormData) {
 }
 
 export default async function AdminPages({
-    searchParams,
+    _searchParams,
 }: {
-    searchParams?: Record<string, string | string[] | undefined>;
+    _searchParams?: Record<string, string | string[] | undefined>;
 }) {
 
     const { pages } = await getData();

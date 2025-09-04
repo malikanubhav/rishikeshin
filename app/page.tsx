@@ -1,10 +1,9 @@
 // app/page.tsx
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import Hero from "./components/Hero";
-import ExploreBeautiful from "./components/ExploreBeautiful";
 import WhyRishikeshin from "./components/WhyRishikeshBharat";
+
 
 export const metadata: Metadata = {
   title: "Rishikeshin — Discover Rishikesh: Yoga, Adventure & Spirituality",
@@ -94,14 +93,11 @@ export default function Home() {
 
   return (
     <div>
-      {/* Inline JSON-LD (Google recommends JSON-LD for structured data) */}
       <script
         type="application/ld+json"
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* NAV is assumed in layout; include top skip link for a11y */}
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-white text-black px-3 py-2 rounded">
         Skip to content
       </a>
@@ -296,7 +292,6 @@ export default function Home() {
 
       {/* Minimal analytics hooks (optional) */}
       <script
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
           __html: `
           window.dataLayer = window.dataLayer || [];

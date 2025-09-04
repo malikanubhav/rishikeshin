@@ -35,3 +35,4 @@ prisma/*.db-journal
 
 # Media to keep out of git (use Git LFS instead)
 
+.vercel
