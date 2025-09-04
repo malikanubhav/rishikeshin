@@ -18,7 +18,6 @@ export default function Hero() {
 
     return (
         <section className="relative isolate overflow-hidden bg-slate-950">
-            {/* Background video */}
             <div className="absolute inset-0 -z-10">
                 <video
                     ref={videoRef}
@@ -28,7 +27,6 @@ export default function Hero() {
                     loop
                     playsInline
                     preload="auto"
-                    poster="/hero-poster.jpg"
                 >
                     <source src="/hero.mp4" type="video/mp4" />
                 </video>
