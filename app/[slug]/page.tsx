@@ -2,10 +2,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { prisma } from "@/lib/prisma";
 import { canonical } from "@/lib/seo";
-const SKIP = !!process.env.SKIP_BUILD_STATIC_GENERATION;
 
 export async function generateStaticParams() {
-    if (SKIP) return []; // ← don’t touch DB at build
     const top = await prisma.page.findMany({
         where: { status: "PUBLISHED" },
         select: { slug: true },
