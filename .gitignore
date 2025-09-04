@@ -34,10 +34,4 @@ prisma/*.db
 prisma/*.db-journal
 
 # Media to keep out of git (use Git LFS instead)
-public/**/*.mp4
-public/**/*.mov
-public/**/*.zip
-public/**/*.iso
-public/*.mp4
-public/*.mov
-public/*.webm
+
