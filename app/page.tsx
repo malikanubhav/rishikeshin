@@ -4,7 +4,6 @@ import Link from "next/link";
 import Hero from "./components/Hero";
 import WhyRishikeshin from "./components/WhyRishikeshBharat";
 
-
 export const metadata: Metadata = {
   title: "Rishikeshin — Discover Rishikesh: Yoga, Adventure & Spirituality",
   description:
@@ -31,8 +30,8 @@ const AFF = {
   booking: "https://www.booking.com/index.html?aid=YOUR_ID",
 };
 
+
 export default function Home() {
-  // JSON-LD (TouristDestination, BreadcrumbList, FAQPage)
   const jsonLd = [
     {
       "@context": "https://schema.org",

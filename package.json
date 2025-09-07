@@ -13,6 +13,7 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
+    "@microsoft/clarity": "^1.0.0",
     "@prisma/client": "6.15.0",
     "next": "15.5.2",
     "prisma": "6.15.0",
